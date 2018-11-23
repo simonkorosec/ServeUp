@@ -73,7 +73,7 @@ Base URL: https://serveup-backend.herokuapp.com/api/
 - restaurant/register
 - request type: POST
 - Register a new restaurant
-- API call should recieve a JSON with the name of the restaurant
+- API call should recieve a JSON with the name of the restaurant, type, adress id, admin id and rating
 - API returns a JSON with the status and a short description
 - Status
   * 0 - Error
@@ -83,10 +83,11 @@ Base URL: https://serveup-backend.herokuapp.com/api/
 
 ```JSON
 {
-    "email": "random.admin@gmail.com",
     "ime_restavracije": "Random_Cantina_Mexicana",
     "id_tip_restavracije": "13",
-    "ocena" : "10"
+    "id_naslov": "1",
+    "id_admin": "2",
+    "ocena" : "5"
 }
 ```
 ###### Return value:
