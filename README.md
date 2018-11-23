@@ -1,5 +1,6 @@
 # Serve Up API Documentation
 Base URL: https://serveup-backend.herokuapp.com/api/
+
 ### Admin user registration  
   - admin_user/register/
   - Request type: POST
@@ -24,12 +25,13 @@ Base URL: https://serveup-backend.herokuapp.com/api/
 }
 ```
 ---
-### Admin user login  
+### Admin user login
   - admin_user/login/
   - Request type: POST
   - Check if the credentials match a user in the database
   - The API call should recive a JSON with an email address and a password
   - The API returnes a JSON with the status and a short description
+  - If status is 1 the JSON also has a 'id_restavracija' which is the id of the restaurant or None
   - Status: 
     * 0 - Error (incorect mail / password)
     * 1 - OK 
@@ -48,7 +50,7 @@ Base URL: https://serveup-backend.herokuapp.com/api/
 }
 ```
 ---
-### Get restaurant types  
+### Get restaurant types
   - restaurant_type/
   - Request type: GET
   - Get a list of restaurant types
