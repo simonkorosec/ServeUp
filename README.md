@@ -108,7 +108,8 @@ Base URL: https://serveup-backend.herokuapp.com/api/
 - API returns a JSON with the status and a short description
 - Status
   * 0 - Error
-  * 1 - OK
+  * 1 - OK - New User
+  * 2 - OK - Existing User
 
 ###### Input data:  
 
