@@ -1,8 +1,8 @@
 # Serve Up API Documentation
-Base URL: https://serveup-backend.herokuapp.com/api/
+Base URL: `https://serveup-backend.herokuapp.com/api/`
 
 ### Admin user registration  
-  - admin_user/register/
+  - `admin_user/register/`
   - Request type: POST
   - Register a new admin user
   - The API call should recive a JSON with an email address and a password
@@ -26,7 +26,7 @@ Base URL: https://serveup-backend.herokuapp.com/api/
 ```
 ---
 ### Admin user login
-  - admin_user/login/
+  - `admin_user/login/`
   - Request type: POST
   - Check if the credentials match a user in the database
   - The API call should recive a JSON with an email address and a password
@@ -51,7 +51,7 @@ Base URL: https://serveup-backend.herokuapp.com/api/
 ```
 ---
 ### Get restaurant types
-  - restaurant_type/
+  - `restaurant_type/`
   - Request type: GET
   - Get a list of restaurant types
   - The API returnes a JSON array of every restaurant type in the database
@@ -70,7 +70,7 @@ Base URL: https://serveup-backend.herokuapp.com/api/
 ```
 ---
 ### Restaurant registration
-- restaurant/register
+- `restaurant/register`
 - request type: POST
 - Register a new restaurant
 - API call should recieve a JSON with the email of the admin, name of the restaurant, type, address and rating
@@ -101,7 +101,7 @@ Base URL: https://serveup-backend.herokuapp.com/api/
 ---
 ### User registration
 
-- user/register
+- `user/register`
 - request type: POST
 - Register a new user
 - API call should recieve a JSON with the token of the user
