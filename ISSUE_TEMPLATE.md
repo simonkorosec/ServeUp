@@ -22,12 +22,29 @@
     "tmp_key": "tmp_value"
 }
 ```
+###### Example Input:
+```JSON
+{
+    "location": "Ljubljana"
+}
+```
+
 ###### Returned value:
 ```JSON
 {
     "status": 0,
     "description": "Error ...",
     "if_needed_key": "if_needed_value"
+}
+```
+###### Example Return:
+```JSON
+{
+    "restaurant_id":"1",
+    "restaurant_name": "Foculus",
+    "restaurant_type": "Picerija",
+    "restaurant_image": "01010101010101001010101010....",
+    "restaurant_rating": "4.5",
 }
 ```
 ***
@@ -43,11 +60,27 @@
     "tmp_key": "tmp_value"
 }
 ```
+###### Example Input:
+```JSON
+{
+    "location": "Ljubljana"
+}
+```
 ###### Returned value:
 ```JSON
 {
     "status": 0,
     "description": "Error ...",
     "if_needed_key": "if_needed_value"
+}
+```
+###### Example Return:
+```JSON
+{
+    "restaurant_id":"1",
+    "restaurant_name": "Foculus",
+    "restaurant_type": "Picerija",
+    "restaurant_image": "01010101010101001010101010....",
+    "restaurant_rating": "4.5",
 }
 ```
