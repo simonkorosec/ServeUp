@@ -7,6 +7,7 @@
 
 ## Issue: New API call
 ### Name of new API feature
+  - App/Website: Page on the mockup
   - Request type: ... (POST, GET, PUT, DELETE)
   - API description
   - Input data description (optional)
@@ -51,6 +52,7 @@
 
 ## Issue: Bug report
 ### Name of the bugged API feature
+  - App/Website: Page on the mockup
   - Request type: ... (POST, GET, PUT, DELETE)
   - Expected output: What should the API return 
 
