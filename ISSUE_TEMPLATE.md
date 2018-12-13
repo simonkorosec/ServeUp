@@ -1,9 +1,12 @@
-Check the apropriate check box of the issue type and delete the part of the issue that is not needed. 
+## How to submit an issue
+ 1. Delete all **Issue** sections except for the one you want to submit
+ 2. Fill out the missing data.
+ 3. Delete this **How to** section
 
-- [ ] New API call
-- [ ] Bug Report
 ***
-### API Name of new feature
+
+## Issue: New API call
+### Name of new API feature
   - Request type: ... (POST, GET, PUT, DELETE)
   - API description
   - Input data description (optional)
@@ -28,7 +31,9 @@ Check the apropriate check box of the issue type and delete the part of the issu
 }
 ```
 ***
-### Bug report
+
+## Issue: Bug report
+### Name of the bugged API feature
   - Request type: ... (POST, GET, PUT, DELETE)
   - Expected output: What should the API return 
 
