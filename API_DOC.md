@@ -111,7 +111,6 @@
   * 2 - OK - Existing User
 
 ###### Input data:  
-
 ```JSON
 {
     "id_uporabnik": "12342"
@@ -134,10 +133,9 @@
 - API returns a JSON with the status and a short description, if status is OK also return list of restaurants
 - Status
   * 0 - Error
-  * 1 - OK - New User
+  * 1 - OK
 
 ###### Input data:  
-
 ```JSON
 {
     "location": "City name"
@@ -159,6 +157,56 @@
             "postna_stevilka": "x",
             "kraj": "x",
             "slika": "base64 encoded restaurant image"
+        }
+    ]
+}
+```
+---
+### Orders for user
+
+- `user/get_orders`
+- request type: POST
+- Retrive all orders and meal data for given user
+- API call should recieve a JSON with the user id and an optional field 'num_orders'
+- Field 'num_orders' specifies how many orders are to be returned, default value is 10
+- API returns a JSON with the status and a short description, if status is OK also return list of orders
+- Each order also has an array of its meals
+- Status
+  * 0 - Error
+  * 1 - OK 
+
+###### Input data:  
+
+```JSON
+{
+	"id_uporabnik": "user id",
+	"num_orders": 10
+}
+```
+###### Return value:
+```JSON
+{
+    "status": 1,
+    "description": "Orders for user: id",
+    "orders": [
+        {
+            "id_narocila": x,
+            "cas_prevzema": "2018-12-14T18:31:25Z",
+            "cas_narocila": "2018-12-14T18:31:27Z",
+            "ime_restavracije": "x",
+            "cena": 5,
+            "jedi": [
+                {
+                    "ime_jedi": "x",
+                    "cena": 2,
+                    "opis_jedi": "x"
+                },
+                {
+                    "ime_jedi": "x",
+                    "cena": 3,
+                    "opis_jedi": "x"
+                },
+            ]
         }
     ]
 }
