@@ -124,3 +124,42 @@
     "description": "Error ..."
 }
 ```
+---
+### Restaurants for city
+
+- `restaurant/home`
+- request type: POST
+- Retrive all restaurants in given city
+- API call should recieve a JSON with city name
+- API returns a JSON with the status and a short description, if status is OK also return list of restaurants
+- Status
+  * 0 - Error
+  * 1 - OK - New User
+
+###### Input data:  
+
+```JSON
+{
+    "location": "City name"
+}
+```
+###### Return value:
+```JSON
+{
+    "status": 1,
+    "description": "Restaurants for city: city_name.",
+    "data": [
+        {
+            "id_restavracija": x,
+            "ime_restavracije": "name",
+            "ocena": x,
+            "tip": "x",
+            "ulica": "x",
+            "hisna_stevilka": x,
+            "postna_stevilka": "x",
+            "kraj": "x",
+            "slika": "base64 encoded restaurant image"
+        }
+    ]
+}
+```
