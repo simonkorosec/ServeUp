@@ -130,10 +130,11 @@
 - request type: POST
 - Retrive all restaurants in given city
 - API call should recieve a JSON with city name
-- API returns a JSON with the status and a short description, if status is OK also return list of restaurants
+- API returns a JSON array of restaurants and their data
+- If the API call is not properly formated return error status with description
+- This inconsistency between API calls is the blame of Urban Jagodic
 - Status
   * 0 - Error
-  * 1 - OK
 
 ###### Input data:  
 ```JSON
@@ -143,23 +144,20 @@
 ```
 ###### Return value:
 ```JSON
-{
-    "status": 1,
-    "description": "Restaurants for city: city_name.",
-    "data": [
-        {
-            "id_restavracija": x,
-            "ime_restavracije": "name",
-            "ocena": x,
-            "tip": "x",
-            "ulica": "x",
-            "hisna_stevilka": x,
-            "postna_stevilka": "x",
-            "kraj": "x",
-            "slika": "base64 encoded restaurant image"
-        }
-    ]
-}
+[
+  {
+    "id_restavracija": x,
+    "ime_restavracije": "name",
+    "ocena": x,
+    "tip": "x",
+    "ulica": "x",
+    "hisna_stevilka": x,
+    "postna_stevilka": "x",
+    "kraj": "x",
+    "slika": "base64 encoded restaurant image"
+  }
+]
+
 ```
 ---
 ### Orders for user
