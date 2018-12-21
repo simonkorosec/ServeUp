@@ -209,3 +209,46 @@
     ]
 }
 ```
+---
+### Refresh orders for restaurant
+
+- `orders/refresh/?id_restavracija=id`
+- request type: GET
+- Retrive all new and cancelled orders for the specified restaurant since tha last call of this API
+- Returnes a status indicator and two lists
+- Status:
+  * 0 - Error
+  * 1 - Ok
+  
+###### Return value:
+```JSON
+{
+    "status": 1,
+    "new_orders": [
+        {
+            "cas_prevzema": "2018-12-22T14:34:00",
+            "cas_narocila": "2018-12-21T14:34:00",
+            "id_restavracija": 6,
+            "id_uporabnik": "56756",
+            "jedi": [
+                {
+                    "id_jed": 1,
+		    "ime_jedi": "Jed 1",
+                    "kolicina": 2,
+                    "cena": 5
+                },
+                {
+                    "id_jed": 3,
+		    "ime_jedi": "Jed 2",
+                    "kolicina": 3,
+                    "cena": 6.8
+                }
+            ],
+            "cena": 30.4,
+	    "id_narocila": 23
+        }
+    ],
+    "cancelled_orders": [16, 17]
+}
+```
+  
