@@ -210,6 +210,48 @@
 }
 ```
 ---
+### All orders for restaurant
+
+- `orders/?id_restavracija=id`
+- request type: GET
+- Retrieve all active orders for the specified restaurant
+- Returnes a status indicator and a list of all orders
+- Status:
+  * 0 - Error
+  * 1 - Ok
+  
+###### Return value:
+```JSON
+{
+     "status": 1,
+     "data": [
+    	{
+            "cas_prevzema": "2018-12-22T14:34:00Z",
+            "cas_narocila": "2018-12-21T14:34:00Z",
+            "id_restavracija": 6,
+            "id_uporabnik": 56756,
+            "cena": 11.8,
+            "id_narocila": 17,
+            "status": "Pripravljeno",
+            "jedi": [
+                {
+                    "id_jed": 1,
+                    "ime_jedi": "Test",
+                    "kolicina": 2,
+                    "cena": 5.0
+                },
+                {
+                    "id_jed": 3,
+                    "ime_jedi": "Jed 3",
+                    "kolicina": 3,
+                    "cena": 6.8
+                }
+            ]
+        }
+    ]
+}
+```
+---
 ### Refresh orders for restaurant
 
 - `orders/refresh/?id_restavracija=id`
