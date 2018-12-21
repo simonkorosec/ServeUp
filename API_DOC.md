@@ -251,4 +251,77 @@
     "cancelled_orders": [16, 17]
 }
 ```
+---
+### New order by user
+
+- `orders/new_order/`
+- request type: POST
+- Create new order for the current user
+- Input fields 'ime_jedi', 'cena' should be the same as the ones you get from the database, this is so we reduce the number of queries
+- Status:
+  * 0 - Error
+  * 1 - Ok
   
+
+###### Input data:
+```JSON
+{
+	"cas_prevzema": "2018-12-22T14:34:00",
+	"cas_narocila": "2018-12-21T14:34:00",
+	"id_restavracija": 6,
+	"id_uporabnik": "56756",
+	"jedi":
+    [
+		{
+          "id_jed": 1,
+          "ime_jedi": "Jed 1",
+          "kolicina": 2,
+          "cena": 5
+		},
+		{
+          "id_jed": 3,
+          "ime_jedi": "Jed 2",
+          "kolicina": 3,
+          "cena": 6.8
+		}
+	]
+}
+```
+---
+### Cancel order by user
+
+- `orders/cancel_order/`
+- request type: POST
+- Cancel an order
+- API call should recieve the order id
+- Status:
+  * 0 - Error
+  * 1 - Ok
+  
+
+###### Input data:
+```JSON
+{
+	"id_narocilo": 18
+}
+```
+---
+### Create new meal in restaurant
+
+- `meals/new_meal/`
+- request type: POST
+- Status:
+  * 0 - Error
+  * 1 - Ok
+  
+
+###### Input data:
+```JSON
+{
+    "ime_jedi": "Jed 1",
+    "cena": 3,
+    "opis_jedi": "To je jed 1",
+    "id_jedilni_list": 2,
+    "id_restavracija": 6
+}
+```
