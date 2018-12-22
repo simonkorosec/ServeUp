@@ -304,7 +304,6 @@
 - Status:
   * 0 - Error
   * 1 - Ok
-  
 
 ###### Input data:
 ```JSON
@@ -313,8 +312,7 @@
 	"cas_narocila": "2018-12-21T14:34:00",
 	"id_restavracija": 6,
 	"id_uporabnik": "56756",
-	"jedi":
-    [
+	"jedi": [
 		{
           "id_jed": 1,
           "ime_jedi": "Jed 1",
@@ -340,7 +338,6 @@
 - Status:
   * 0 - Error
   * 1 - Ok
-  
 
 ###### Input data:
 ```JSON
@@ -357,7 +354,6 @@
   * 0 - Error
   * 1 - Ok
   
-
 ###### Input data:
 ```JSON
 {
@@ -366,5 +362,38 @@
     "opis_jedi": "To je jed 1",
     "id_jedilni_list": 2,
     "id_restavracija": 6
+}
+```
+---
+### Get meals for restaurant
+
+- `meals/?id_restavracija=id`
+- request type: Get
+- Return every meal in requested restaurant, grouped by their meal type
+- Status:
+  * 0 - Error
+
+###### Return data:
+```JSON
+{
+    "meal_type": [
+        {
+            "ime_jedi": "ime jedi",
+            "opis_jedi": "opis jedi",
+            "cena": 1.0
+        }
+    ],
+    "Juhe": [
+        {
+            "ime_jedi": "Test",
+            "opis_jedi": "Testna jed",
+            "cena": 5.0
+        },
+        {
+            "ime_jedi": "Test Jed",
+            "opis_jedi": "Testna jed 1",
+            "cena": 5.8
+        }
+    ]
 }
 ```
