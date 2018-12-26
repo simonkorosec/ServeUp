@@ -169,9 +169,13 @@
 - Field 'num_orders' specifies how many orders are to be returned, default value is 10
 - API returns a JSON with the status and a short description, if status is OK also return list of orders
 - Each order also has an array of its meals
+- Order status:
+  	* 0 - New Order
+	* 1 - Order ready
+	* 2 - Order finished
 - Status
-  * 0 - Error
-  * 1 - OK 
+	* 0 - Error
+  	* 1 - OK 
 
 ###### Input data:  
 
@@ -193,6 +197,7 @@
             "cas_narocila": "2018-12-14T18:31:27Z",
             "ime_restavracije": "x",
             "cena": 5,
+	    "status": 0,
             "jedi": [
                 {
                     "ime_jedi": "x",
@@ -313,18 +318,18 @@
 	"id_restavracija": 6,
 	"id_uporabnik": "56756",
 	"jedi": [
-		{
-          "id_jed": 1,
-          "ime_jedi": "Jed 1",
-          "kolicina": 2,
-          "cena": 5
-		},
-		{
-          "id_jed": 3,
-          "ime_jedi": "Jed 2",
-          "kolicina": 3,
-          "cena": 6.8
-		}
+	 {
+           "id_jed": 1,
+           "ime_jedi": "Jed 1",
+           "kolicina": 2,
+           "cena": 5
+	 },
+	 {
+           "id_jed": 3,
+           "ime_jedi": "Jed 2",
+           "kolicina": 3,
+           "cena": 6.8
+	 }
 	]
 }
 ```
@@ -387,12 +392,14 @@
         {
             "ime_jedi": "Test",
             "opis_jedi": "Testna jed",
-            "cena": 5.0
+            "cena": 5.0,
+	    "kolicina": 1
         },
         {
             "ime_jedi": "Test Jed",
             "opis_jedi": "Testna jed 1",
-            "cena": 5.8
+            "cena": 5.8,
+	    "kolicina": 1
         }
     ]
 }
