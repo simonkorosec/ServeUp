@@ -200,14 +200,18 @@
 	    "status": 0,
             "jedi": [
                 {
+		    "id_jed": 0,
                     "ime_jedi": "x",
                     "cena": 2,
-                    "opis_jedi": "x"
+                    "opis_jedi": "x",
+		    "kolicina": 1
                 },
                 {
+		    "id_jed": 0,
                     "ime_jedi": "x",
                     "cena": 3,
-                    "opis_jedi": "x"
+                    "opis_jedi": "x",
+		    "kolicina": 2
                 },
             ]
         }
@@ -238,7 +242,8 @@
             "id_uporabnik": 56756,
             "cena": 11.8,
             "id_narocila": 17,
-            "status": "Pripravljeno",
+            "status": 0,
+	    "checked_in" : true
             "jedi": [
                 {
                     "id_jed": 1,
@@ -278,6 +283,10 @@
             "cas_narocila": "2018-12-21T14:34:00",
             "id_restavracija": 6,
             "id_uporabnik": "56756",
+	    "cena": 30.4,
+	    "id_narocila": 23,
+	    "status": 0,
+	    "checked_in" : true,
             "jedi": [
                 {
                     "id_jed": 1,
@@ -292,8 +301,7 @@
                     "cena": 6.8
                 }
             ],
-            "cena": 30.4,
-	    "id_narocila": 23
+            
         }
     ],
     "cancelled_orders": [16, 17]
@@ -383,6 +391,7 @@
 {
     "meal_type": [
         {
+	    "id_jed": 1,
             "ime_jedi": "ime jedi",
             "opis_jedi": "opis jedi",
             "cena": 1.0
@@ -390,12 +399,14 @@
     ],
     "Juhe": [
         {
+	    "id_jed": 1,
             "ime_jedi": "Test",
             "opis_jedi": "Testna jed",
             "cena": 5.0,
 	    "kolicina": 1
         },
         {
+   	    "id_jed": 2,
             "ime_jedi": "Test Jed",
             "opis_jedi": "Testna jed 1",
             "cena": 5.8,
