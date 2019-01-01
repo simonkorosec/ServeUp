@@ -347,7 +347,7 @@
 - `orders/cancel_order/`
 - request type: POST
 - Cancel an order
-- API call should recieve the order id
+- API call should receive the order id
 - Status:
   * 0 - Error
   * 1 - Ok
@@ -356,6 +356,24 @@
 ```JSON
 {
 	"id_narocilo": 18
+}
+```
+---
+### Change order status
+
+- `orders/status_update/`
+- request type: POST
+- Update order status
+- API call should receive the order id and the desired new status
+- Status:
+  * 0 - Error
+  * 1 - Ok
+
+###### Input data:
+```JSON
+{
+	"id_narocilo": 18,
+	"status": 3
 }
 ```
 ---
