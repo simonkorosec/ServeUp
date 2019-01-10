@@ -223,8 +223,7 @@
 
 - `orders/?id_restavracija=id`
 - request type: GET
-- Retrieve all active orders for the specified restaurant
-- Order is active if its status is 'Nova Naročila', 'V Pripravi', 'Pripravljeno'
+- Retrieve all orders for the specified restaurant
 - Returnes a status indicator and a list of all orders
 - Status:
   * 0 - Error
