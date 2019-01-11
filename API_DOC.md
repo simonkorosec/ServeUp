@@ -432,3 +432,32 @@
     ]
 }
 ```
+---
+### Get all QR codes for restaurant
+
+- `restaurant/fetch_qr/?id_restavracija=id`
+- request type: GET
+- Retrieve all QR codes for a restaurant with a given id
+- API call should contain ID parameter
+- API returns a JSON array of QR codes for a restaurant
+- Status
+  * 0 - Error
+  * 1 - Success
+  
+
+###### Input data:  
+```JSON
+{
+    "location": "City name"
+}
+```
+###### Return value:
+```JSON
+{
+    "status": 1
+    "data" : [
+    	"iamaqrcode",
+	"iamalsoaqrcode"
+    ]
+}
+```
