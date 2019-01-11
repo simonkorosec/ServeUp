@@ -443,21 +443,41 @@
 - Status
   * 0 - Error
   * 1 - Success
+
+###### Return value:
+```JSON
+{
+    "status": 1
+    "data": [
+    	"iamaqrcode",
+	"iamalsoaqrcode"
+    ]
+}
+```
+---
+### Add new table for restaurant
+
+- `restaurant/add_table/`
+- request type: POST
+- Adds a new table to restaurant
+- API call should contain JSON data with id_restavracija and qr
+- API returns status and description
+- Status
+  * 0 - Error
+  * 1 - Success
   
 
 ###### Input data:  
 ```JSON
 {
-    "location": "City name"
+    "id_restavracija": 8,
+    "qr": "iamaqrcode"
 }
 ```
 ###### Return value:
 ```JSON
 {
-    "status": 1
-    "data" : [
-    	"iamaqrcode",
-	"iamalsoaqrcode"
-    ]
+    "status": 1,
+    "description": "Successfully added table to restaurant"
 }
 ```
