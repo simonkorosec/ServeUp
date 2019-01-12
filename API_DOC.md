@@ -481,3 +481,30 @@
     "description": "Successfully added table to restaurant"
 }
 ```
+---
+### Add check-in for orders
+
+- `/user/check_in/`
+- request type: POST
+- Changes the status of the order with the given ID to checked_in = True and adds order to refresh cycle
+- API call should contain JSON data with id_narocilo and qr
+- API returns status and description
+- Status
+  * 0 - Error
+  * 1 - Success
+  
+
+###### Input data:  
+```JSON
+{
+    "id_narocilo": 20,
+    "qr": "iamaqrcode"
+}
+```
+###### Return value:
+```JSON
+{
+    "status": 1,
+    "description": "Successfully checked-in order"
+}
+```
