@@ -266,8 +266,8 @@
 
 - `orders/refresh/?id_restavracija=id`
 - request type: GET
-- Retrive all new and cancelled orders for the specified restaurant since tha last call of this API
-- Returnes a status indicator and two lists
+- Retrive all new,cancelled and checked_in orders for the specified restaurant since tha last call of this API
+- Returnes a status indicator and three lists
 - Status:
   * 0 - Error
   * 1 - Ok
@@ -303,7 +303,13 @@
             
         }
     ],
-    "cancelled_orders": [16, 17]
+    "cancelled_orders": [16, 17],
+    "checked_in_orders": [
+                {                                      
+                    "id_narocila": 1,
+		    "qr_koda": "Miza 12",
+                }
+     ]
 }
 ```
 ---
