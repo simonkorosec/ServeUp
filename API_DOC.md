@@ -199,6 +199,7 @@
             "ime_restavracije": "x",
             "cena": 5,
 	    "status": 0,
+	    "checked_in": false,
             "jedi": [
                 {
 		    "id_jed": 0,
