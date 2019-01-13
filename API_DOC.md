@@ -44,8 +44,9 @@
 ###### Returned value:
 ```JSON
 {
-    "status": 0,
-    "description": "Error ..."
+    "status": 1,
+    "description": "OK",
+    "id_restavracija": 0
 }
 ```
 ---
