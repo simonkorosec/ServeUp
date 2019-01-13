@@ -9,7 +9,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -24,19 +23,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import serve.serveup.R;
 import serve.serveup.dataholder.UserInfo;
-import serve.serveup.dataholder.apistatus.ApiStatus;
-import serve.serveup.dataholder.login.UserStatusType;
-import serve.serveup.dataholder.session.SessionContent;
-import serve.serveup.utils.ContentStore;
 import serve.serveup.utils.GoogleSignInUtil;
 import serve.serveup.utils.Utils;
-import serve.serveup.views.NavigationPanelActivity;
-import serve.serveup.webservices.RestManagement;
 
 
 public class LoginFragment extends Fragment  {
@@ -80,16 +70,8 @@ public class LoginFragment extends Fragment  {
                              Bundle savedInstanceState) {
 
         View myLayout = inflater.inflate(R.layout.fragment_login, container, false);
-        signUp = myLayout.findViewById(R.id.textSignUp);
         googleButton = myLayout.findViewById(R.id.google_button);
 
-        Button fakeLogin = myLayout.findViewById(R.id.fakeLogin);
-        fakeLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fakeLogin();
-            }
-        });
 
         myGoogleUtil = new GoogleSignInUtil(getContext(), mAuth);
         myGoogleUtil.setUp();
@@ -200,47 +182,5 @@ public class LoginFragment extends Fragment  {
         startMainPanel.putExtras(myBundle);
         startActivity(startMainPanel);
     }
-
-    // delete before publishing/presenting
-    public void fakeLogin() {
-
-        final UserInfo myUserInfo = new UserInfo();
-        myUserInfo.setDisplayName("Urban Jagodic");
-        myUserInfo.setEmail("jagodic.urban.14@gmail.com");
-        myUserInfo.setPhotoUrl("https://lh3.googleusercontent.com/-Nefr5ZxUIj0/AAAAAAAAAAI/AAAAAAAAC1k/oxBhBmpOWhE/s96-c/photo.jpg");
-        myUserInfo.setuID("108019663263154320255");
-
-        final Bundle myBundle = new Bundle();
-        myBundle.putSerializable("userInfo", myUserInfo);
-        RestManagement.getLoginStatusCall(myUserInfo.getuID()).enqueue(new Callback<ApiStatus>() {
-            @Override
-            public void onResponse(Call<ApiStatus> call, Response<ApiStatus> response) {
-
-                ApiStatus myUserLogin = response.body();
-
-                if(myUserLogin != null) {
-                    Utils.logInfo(myUserLogin.getDescription() + ", status: " + myUserLogin.getStatus());
-                    if(myUserLogin.getStatus() == UserStatusType.EXISTING_USER.getStatus() ||
-                            myUserLogin.getStatus() == UserStatusType.NEW_USER.getStatus()) {
-
-                        Utils.logInfo("Session created");
-                        ContentStore cntStore = new ContentStore(getActivity().getApplicationContext());
-                        cntStore.addToSession(SessionContent.CURRENT_USER, myUserInfo.getuID());
-
-                        Intent startMainPanel = new Intent(getActivity().getApplicationContext(), NavigationPanelActivity.class);
-                        startMainPanel.putExtras(myBundle);
-                        startActivity(startMainPanel);
-                        //Utils.showToast(getActivity(), "Signed in!");
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ApiStatus> call, Throwable t) {
-                Utils.logInfo("api 'user/register/' failed!");
-            }
-        });
-    }
-
 
 }
