@@ -5,7 +5,7 @@
             <label class="company-name">ServeUp</label>
             <input type="text" v-model="full_name" placeholder="Full name"/><br>
             <input type="text" v-model="email" placeholder="Email"/><br>
-            <input type="text" v-model="password" placeholder="Password"/><br>
+            <input type="password" v-model="password" placeholder="Password"/><br>
             <input type="text" v-model="conf_password" placeholder="Confirm Password"/><br>
             <p id="error">{{error}}</p><br>
             <button type="button" v-on:click="register()">Sign up</button><br><br>

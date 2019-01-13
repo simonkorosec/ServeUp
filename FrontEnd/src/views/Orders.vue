@@ -230,8 +230,8 @@ export default {
 
         parseOrder(unparsedOrder) {
             let cas_prevzema = unparsedOrder.cas_prevzema;
-            if (cas_prevzema.slice(-1) !== "Z") {
-                cas_prevzema = cas_prevzema + "Z"
+            if (cas_prevzema.slice(-1) === "Z") {
+                cas_prevzema = cas_prevzema.slice(0, -1);
             }
             console.log(unparsedOrder);
             let parsedOrder = {
@@ -241,7 +241,7 @@ export default {
                 arrivalTime: new Date(cas_prevzema),
                 displayTime: "",
                 ownerName: unparsedOrder.id_uporabnik,
-                priceTotal: unparsedOrder.cena,
+                priceTotal: unparsedOrder.cena.toFixed(2),
                 totalPrepTime: 0,
                 isHighlighted: false,
                 tableName: '',
