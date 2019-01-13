@@ -245,7 +245,7 @@
             "id_narocila": 17,
             "status": 0,
 	    "checked_in" : true,
-	    "id_mizaid_mizaid_mizaid_miza": "qr string od mize",
+	    "id_miza": "qr string od mize",
             "jedi": [
                 {
                     "id_jed": 1,
