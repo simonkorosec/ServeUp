@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00c4ab</color>
+    <color name="colorPrimaryDark1">#00574b</color>
+    <color name="colorAccent">#00c4ab</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorLightGrey">#ebebeb</color>
+    <color name="colorDarkGrey">#c1c1c1</color>
+    <color name="signup_textfield_hint">#747474</color>
+    <color name="search_bar_color">#D6D6D6</color>
+    <color name="textColor">#dd484848</color>
+    <color name="searchIconColor">#a3a3a3</color>
+    <color name="backIconColor">#545454</color>
+    <color name="transparentGrey">#9bf7f7f7</color>
+    <color name="cardview_border_color">#d1d1d1</color>
+    <color name="order_status_new">#67dc61</color>
+    <color name="order_status_finished">#e24b3a</color>
+    <color name="order_status_prepared">#e2ce3a</color>
+
+</resources>
+

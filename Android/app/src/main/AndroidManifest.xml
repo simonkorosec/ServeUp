@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="serve.serveup"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/serveup_logo2_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/serveup_logo2_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode"/>
+
+        <activity
+            android:name=".views.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.NavigationPanelActivity"
+            android:label="@string/title_activity_navigation_panel"
+            android:screenOrientation="portrait"
+            android:theme="@style/NavigationPanelTheme">
+        </activity>
+        <activity
+            android:name=".views.restaurant.RestaurantActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".views.restaurant.CategoryMealsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".views.restaurant.PickedMealActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".views.login.LoadingLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".views.order.PaymentOptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".views.order.PickedOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".views.order.ProcessingPaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme"/>
+        <activity
+            android:name=".views.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchActivityTheme">
+        </activity>
+        <activity
+            android:name=".views.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".views.order.QRcodeScannerActivity"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".views.order.ProcessingQRCodeConfirmationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name=".views.search.SearchedRestaurantsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+    </application>
+
+</manifest>

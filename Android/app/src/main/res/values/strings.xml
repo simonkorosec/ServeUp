@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">ServeUp</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="serve_up">ServeUp</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password">Geslo</string>
+    <string name="forgot_password">Pozabljeno geslo?</string>
+    <string name="full_name">Ime in Priimek</string>
+    <string name="confirm_password">Potrdi geslo</string>
+    <string name="sign_up">Registracija</string>
+    <string name="title_activity_navigation_panel">NavigationPanelActivity</string>
+    <string name="title_home">Domov</string>
+    <string name="title_orders">Naročila</string>
+    <string name="title_basket">Košarica</string>
+    <string name="title_profile">Profil</string>
+    <string name="empty_basket">Vaša košarica je trenutno prazna</string>
+    <string name="title_time_basket">Predviden čas prihoda čez:</string>
+    <string name="minutes_text">30</string>
+    <string name="title_minutes">minut.</string>
+    <string name="basket">Košarica</string>
+    <string name="no_orders">Trenutno nimate nobenih naročil</string>
+    <string name="find_restaurants">Najdi restavracije</string>
+    <string name="find_location">Lokacija</string>
+    <string name="find_food">Hrana</string>
+    <string name="find_from">Termin od</string>
+    <string name="find_to">Termin do</string>
+    <string name="find_button">Iskanje</string>
+    <string name="about_text">O aplikaciji</string>
+    <string name="nearby">V bližini</string>
+    <string name="loading_restaurants">Nalagam restavracije ...</string>
+    <string name="logging_in">Vpisovanje ...</string>
+    <string name="log_in">Vpiši se</string>
+    <string name="account_info">Informacije o računu</string>
+    <string name="settings">Nastavitve</string>
+    <string name="log_out">Odjavi</string>
+    <string name="about_app">O aplikaciji</string>
+    <string name="about">Aplikacija ServeUp je namenjena uporabnikom, ki si želijo novega pristopa naročanja v restavracijah.\n\n\n
+                            ServeUp ekipa:\n\n
+                            Jernej Stražišar\n
+                            Žiga Smrkolj\n
+                            Urban Jagodic\n
+                            Matevž Sešel\n
+                            Lucijan Kvar\n
+                            Simon Korošec\n
+                            Jure Repe</string>
+    <string name="copyright">©ServeUp 2019</string>
+    <string name="kosila">Kosila</string>
+    <string name="juhe">Juhe</string>
+    <string name="glavne_jedi">Glavne jedi</string>
+    <string name="solate">Solate</string>
+    <string name="sladice">Sladice</string>
+    <string name="pijace">Pijače</string>
+
+    <!-- messages -->
+    <string name="meals_empty_category_message">Restavracija nima izbranih jedi v kategoriji \'%s\'</string>
+    <string name="picked_meal_price_text">Cena: %.2f €</string>
+    <string name="picked_meal_overall_price_text">Znesek: %.2f €</string>
+</resources>

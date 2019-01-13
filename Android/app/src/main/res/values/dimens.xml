@@ -1,0 +1,9 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Dimension width and height of a cardView restaurant image -->
+    <dimen name="cardview_restaurant_image_width">120dp</dimen>
+    <dimen name="cardview_restaurant_image_height">120dp</dimen>
+</resources>
