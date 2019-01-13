@@ -65,7 +65,7 @@
     {
         "id_tip_restavracije": 2,
         "tip": "Kitajska"
-    }, ...
+    }
 ]
 ```
 ---
@@ -243,7 +243,8 @@
             "cena": 11.8,
             "id_narocila": 17,
             "status": 0,
-	    "checked_in" : true
+	    "checked_in" : true,
+	    "id_mizaid_mizaid_mizaid_miza": "qr string od mize",
             "jedi": [
                 {
                     "id_jed": 1,
@@ -454,7 +455,7 @@
 ###### Return value:
 ```JSON
 {
-    "status": 1
+    "status": 1,
     "data": [
     	"iamaqrcode",
 	"iamalsoaqrcode"
