@@ -1,0 +1,110 @@
+/* **********************
+  Colors
+********************** */
+
+/* Primary color variations */
+$su-color-primary: #00C4AB;
+$su-color-primary-dark: #005B50;
+$su-color-primary-pale: #6B9F99;
+
+/* Secondary color variations */
+$su-color-secondary: #6100ED;
+$su-color-secondary-dark: #5700ae;
+
+
+/* Greyscale colors */
+$su-color-content-light: #FFFFFF;
+$su-color-background: #E4ECEB;
+$su-color-light-gray: #C5BEBE;
+$su-color-dark-gray: #6D6D6D;
+
+/* Other colors */
+$su-color-red: #F30019;
+$su-color-yellow: #FFB300;
+$su-color-green: #00AF46;
+$su-color-red-light: #ffccce;
+$su-color-yellow-light: #ffe09e;
+$su-color-green-light: #bddfb8;
+
+/* **********************
+  Corners, Borders and shadows
+********************** */
+
+// Borders
+$su-border-radius-s: 4px;
+$su-border-radius-m: 8px;
+$su-border-radius-l: 16px;
+$su-border-radius-xl: 32px;
+
+// Shadows
+$su-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$su-shadow-top: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$su-shadow-hover: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+// Animations
+@mixin su-mx-shadow($shadow-from, $shadow-to) {
+
+}
+
+@mixin su-mx-shadow-hover($shadow-from, $shadow-to) {
+  @keyframes su-a-shadow {
+    from {box-shadow: $shadow-from}
+    to {box-shadow: $shadow-to}
+  }
+
+  animation-name: su-a-shadow;
+  animation-duration: 0.5s;
+  box-shadow: $shadow-to;
+}
+
+/* **********************
+  Mixins
+********************** */
+
+// Styles the scroll bar
+@mixin su-mx-scroll-bar() {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $su-color-light-gray;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $su-color-dark-gray;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: lighten($su-color-primary-dark, 5%);
+  }
+}
+
+// Pushes the last child to the right end of the div
+@mixin su-mx-layout-menu-last-end() {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  :not(:last-child) {
+    margin-right: 16px;
+  }
+
+  :last-child {
+    margin-left: auto;
+  }
+}
+
+// Colors the first and the last child of the element
+@mixin su-mx-color-first-last-child($color-first, $color-last) {
+  :first-child {
+    color: $color-first;
+  }
+
+  :last-child {
+    color: $color-last;
+  }
+}
