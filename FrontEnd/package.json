@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "dwy-vue-session": "^1.0.9",
     "printd": "^1.0.1",
     "qrcode.vue": "^1.6.1",
